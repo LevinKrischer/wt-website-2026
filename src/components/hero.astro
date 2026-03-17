@@ -1,0 +1,14 @@
+---
+const { title, subtitle, ctaText, ctaLink } = Astro.props;
+---
+
+<section class="px-4 py-20 text-center">
+  <h1 class="text-4xl font-bold mb-4">{title}</h1>
+  <p class="text-lg text-gray-600 mb-8">{subtitle}</p>
+  <a
+    href={ctaLink}
+    class="inline-block px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+  >
+    {ctaText}
+  </a>
+</section>

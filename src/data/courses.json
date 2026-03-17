@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "title": "Hip-Hop Teens",
+        "level": "Einsteiger",
+        "weekday": "Dienstag",
+        "time": "17:00–18:00"
+    },
+    {
+        "id": 2,
+        "title": "Paartanz Anfänger",
+        "level": "Grundkurs",
+        "weekday": "Freitag",
+        "time": "19:00–20:30"
+    }
+]

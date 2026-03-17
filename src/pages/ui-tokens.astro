@@ -1,0 +1,286 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="de" class="bg-brand-gray-50 text-brand-gray-800">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>UI Tokens – Design System</title>
+    </head>
+
+    <body class="min-h-screen overflow-x-auto">
+        <header class="sticky top-0 z-10 border-b border-brand-gray-200 bg-white/90 backdrop-blur">
+            <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+                <div>
+                    <h1 class="text-h3 font-bold text-brand-primary">UI Tokens</h1>
+                    <p class="text-meta text-brand-gray-600">Token-Referenz mit sichtbaren Interaktionszustaenden.</p>
+                </div>
+                <span class="rounded-full bg-brand-gray-100 px-3 py-1 text-meta text-brand-gray-600">Design System</span>
+            </div>
+        </header>
+
+        <main class="mx-auto max-w-6xl px-4 py-16 space-y-24">
+            <!-- COLORS -->
+            <section>
+                <h2 class="text-h2 font-bold mb-8">Farben</h2>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- Primary -->
+                    <div>
+                        <div class="h-20 rounded-lg bg-brand-primary"></div>
+                        <p class="mt-2 font-medium">Primary</p>
+                        <p class="text-meta">#23972c</p>
+                    </div>
+
+                    <div>
+                        <div class="h-20 rounded-lg bg-brand-primary-light"></div>
+                        <p class="mt-2 font-medium">Primary Light</p>
+                    </div>
+
+                    <div>
+                        <div class="h-20 rounded-lg bg-brand-primary-dark"></div>
+                        <p class="mt-2 font-medium">Primary Dark</p>
+                    </div>
+
+                    <!-- Accent -->
+                    <div>
+                        <div class="h-20 rounded-lg bg-brand-accent"></div>
+                        <p class="mt-2 font-medium">Accent</p>
+                        <p class="text-meta">#943764</p>
+                    </div>
+
+                    <div>
+                        <div class="h-20 rounded-lg bg-brand-accent-light"></div>
+                        <p class="mt-2 font-medium">Accent Light</p>
+                    </div>
+
+                    <div>
+                        <div class="h-20 rounded-lg bg-brand-accent-dark"></div>
+                        <p class="mt-2 font-medium">Accent Dark</p>
+                    </div>
+
+                    <!-- Grays -->
+                    <div>
+                        <div class="h-20 rounded-lg bg-brand-gray-50"></div>
+                        <p class="mt-2 font-medium">Gray 50</p>
+                    </div>
+
+                    <div>
+                        <div class="h-20 rounded-lg bg-brand-gray-200"></div>
+                        <p class="mt-2 font-medium">Gray 200</p>
+                    </div>
+
+                    <div>
+                        <div class="h-20 rounded-lg bg-brand-gray-400"></div>
+                        <p class="mt-2 font-medium">Gray 400</p>
+                    </div>
+
+                    <div>
+                        <div class="h-20 rounded-lg bg-brand-gray-700"></div>
+                        <p class="mt-2 font-medium text-white">Gray 700</p>
+                    </div>
+
+                    <div>
+                        <div class="h-20 rounded-lg bg-brand-gray-900"></div>
+                        <p class="mt-2 font-medium text-white">Gray 900</p>
+                    </div>
+                </div>
+
+                <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
+                    <div class="rounded-lg border border-brand-gray-200 bg-white p-4">
+                        <p class="mb-3 font-medium text-brand-gray-700">Primary zu Primary Dark (Hover)</p>
+                        <div class="flex gap-3">
+                            <div class="h-14 flex-1 rounded-md bg-brand-primary"></div>
+                            <div class="h-14 flex-1 rounded-md bg-brand-primary-dark"></div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-lg border border-brand-gray-200 bg-white p-4">
+                        <p class="mb-3 font-medium text-brand-gray-700">Accent zu Accent Dark (Hover)</p>
+                        <div class="flex gap-3">
+                            <div class="h-14 flex-1 rounded-md bg-brand-accent"></div>
+                            <div class="h-14 flex-1 rounded-md bg-brand-accent-dark"></div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-lg border border-brand-gray-200 bg-white p-4">
+                        <p class="mb-3 font-medium text-brand-gray-700">Focus Ring Token</p>
+                        <button class="w-full rounded-md bg-brand-primary px-4 py-3 text-white ring-4 ring-brand-primary/30">Focus Preview</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TYPOGRAPHY -->
+            <section>
+                <h2 class="text-h2 font-bold mb-8">Typografie</h2>
+
+                <div class="space-y-8">
+                    <div>
+                        <p class="text-hero font-bold">Hero Headline – 2.5rem</p>
+                    </div>
+
+                    <div>
+                        <p class="text-h1 font-bold">H1 – 2rem</p>
+                    </div>
+
+                    <div>
+                        <p class="text-h2 font-bold">H2 – 1.75rem</p>
+                    </div>
+
+                    <div>
+                        <p class="text-h3 font-semibold">H3 – 1.5rem</p>
+                    </div>
+
+                    <div>
+                        <p class="text-body">Body – 1rem</p>
+                    </div>
+
+                    <div>
+                        <p class="text-body-lg">Body Large – 1.125rem</p>
+                    </div>
+
+                    <div>
+                        <p class="text-meta text-brand-gray-600">Meta – 0.875rem</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SPACING -->
+            <section>
+                <h2 class="text-h2 font-bold mb-8">Spacing</h2>
+
+                <div class="space-y-6">
+                    <div>
+                        <p class="font-medium mb-2">Spacing 4 (1rem)</p>
+                        <div class="h-4 bg-brand-primary-light rounded"></div>
+                    </div>
+
+                    <div>
+                        <p class="font-medium mb-2">Spacing 6 (1.5rem)</p>
+                        <div class="h-6 bg-brand-primary-light rounded"></div>
+                    </div>
+
+                    <div>
+                        <p class="font-medium mb-2">Spacing 8 (2rem)</p>
+                        <div class="h-8 bg-brand-primary-light rounded"></div>
+                    </div>
+
+                    <div>
+                        <p class="font-medium mb-2">Spacing 12 (3rem)</p>
+                        <div class="h-12 bg-brand-primary-light rounded"></div>
+                    </div>
+
+                    <div>
+                        <p class="font-medium mb-2">Spacing 16 (4rem)</p>
+                        <div class="h-16 bg-brand-primary-light rounded"></div>
+                    </div>
+
+                    <div>
+                        <p class="font-medium mb-2">Spacing 24 (6rem)</p>
+                        <div class="h-24 bg-brand-primary-light rounded"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RADIUS -->
+            <section>
+                <h2 class="text-h2 font-bold mb-8">Radius</h2>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="h-20 bg-brand-accent-light rounded-md"></div>
+                        <p class="mt-2 font-medium">rounded-md</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="h-20 bg-brand-accent-light rounded-lg"></div>
+                        <p class="mt-2 font-medium">rounded-lg</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="h-20 bg-brand-accent-light rounded-xl"></div>
+                        <p class="mt-2 font-medium">rounded-xl</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="h-20 bg-brand-accent-light rounded-full"></div>
+                        <p class="mt-2 font-medium">rounded-full</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SHADOWS -->
+            <section>
+                <h2 class="text-h2 font-bold mb-8">Shadows</h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="p-6 bg-white rounded-lg shadow-sm">
+                        <p class="font-medium">shadow-sm</p>
+                    </div>
+
+                    <div class="p-6 bg-white rounded-lg shadow">
+                        <p class="font-medium">shadow</p>
+                    </div>
+
+                    <div class="p-6 bg-white rounded-lg shadow-md">
+                        <p class="font-medium">shadow-md</p>
+                    </div>
+
+                    <div class="p-6 bg-white rounded-lg shadow-lg">
+                        <p class="font-medium">shadow-lg</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STATES -->
+            <section>
+                <h2 class="text-h2 font-bold mb-3">State Matrix</h2>
+                <p class="mb-8 text-brand-gray-600">Normal, Hover, Focus, Active und Disabled als direkte Token-Vorschau.</p>
+
+                <div class="overflow-x-auto rounded-xl border border-brand-gray-200 bg-white">
+                    <table class="min-w-[760px] w-full border-collapse text-left text-body">
+                        <thead class="bg-brand-gray-100 text-brand-gray-700">
+                            <tr>
+                                <th class="px-4 py-3 font-semibold">Token / Element</th>
+                                <th class="px-4 py-3 font-semibold">Normal</th>
+                                <th class="px-4 py-3 font-semibold">Hover</th>
+                                <th class="px-4 py-3 font-semibold">Focus</th>
+                                <th class="px-4 py-3 font-semibold">Active</th>
+                                <th class="px-4 py-3 font-semibold">Disabled</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-t border-brand-gray-200">
+                                <td class="px-4 py-4 font-medium">Primary CTA</td>
+                                <td class="px-4 py-4"><button class="rounded-md bg-brand-primary px-4 py-2 text-white">Normal</button></td>
+                                <td class="px-4 py-4"><button class="rounded-md bg-brand-primary-dark px-4 py-2 text-white shadow">Hover</button></td>
+                                <td class="px-4 py-4"><button class="rounded-md bg-brand-primary px-4 py-2 text-white ring-4 ring-brand-primary/30">Focus</button></td>
+                                <td class="px-4 py-4"><button class="scale-[0.98] rounded-md bg-brand-primary-dark px-4 py-2 text-white">Active</button></td>
+                                <td class="px-4 py-4"><button disabled class="cursor-not-allowed rounded-md bg-brand-gray-300 px-4 py-2 text-white">Disabled</button></td>
+                            </tr>
+
+                            <tr class="border-t border-brand-gray-200">
+                                <td class="px-4 py-4 font-medium">Accent Outline</td>
+                                <td class="px-4 py-4"><button class="rounded-md border border-brand-accent px-4 py-2 text-brand-accent">Normal</button></td>
+                                <td class="px-4 py-4"><button class="rounded-md border border-brand-accent px-4 py-2 text-brand-accent bg-brand-accent-light/20">Hover</button></td>
+                                <td class="px-4 py-4"><button class="rounded-md border border-brand-accent px-4 py-2 text-brand-accent ring-4 ring-brand-accent/20">Focus</button></td>
+                                <td class="px-4 py-4"><button class="scale-[0.98] rounded-md border border-brand-accent-dark px-4 py-2 text-brand-accent-dark bg-brand-accent-light/20">Active</button></td>
+                                <td class="px-4 py-4"><button disabled class="cursor-not-allowed rounded-md border border-brand-gray-300 px-4 py-2 text-brand-gray-400">Disabled</button></td>
+                            </tr>
+
+                            <tr class="border-t border-brand-gray-200">
+                                <td class="px-4 py-4 font-medium">Text Link</td>
+                                <td class="px-4 py-4"><a href="#" class="text-brand-gray-700">Normal</a></td>
+                                <td class="px-4 py-4"><a href="#" class="text-brand-accent underline decoration-brand-accent/50">Hover</a></td>
+                                <td class="px-4 py-4"><a href="#" class="rounded-sm px-1 text-brand-gray-700 ring-2 ring-brand-primary/40">Focus</a></td>
+                                <td class="px-4 py-4"><a href="#" class="text-brand-accent-dark">Active</a></td>
+                                <td class="px-4 py-4"><span class="text-brand-gray-400">Disabled</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

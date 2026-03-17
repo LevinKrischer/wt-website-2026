@@ -1,0 +1,280 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="de" class="bg-brand-gray-50 text-brand-gray-800">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>UI Test – Design System</title>
+    </head>
+
+    <body class="min-h-screen overflow-x-auto">
+        <header class="sticky top-0 z-10 border-b border-brand-gray-200 bg-white/90 backdrop-blur">
+            <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+                <div>
+                    <h1 class="text-h3 font-bold text-brand-primary">UI Komponenten Test</h1>
+                    <p class="text-meta text-brand-gray-600">Alle Beispiele sind sichtbar, inklusive Hover-Vorschau.</p>
+                </div>
+                <span class="rounded-full bg-brand-gray-100 px-3 py-1 text-meta text-brand-gray-600">Tailwind Tokens aktiv</span>
+            </div>
+        </header>
+
+        <!-- NAVBAR -->
+        <section class="py-8 bg-white shadow-sm border-b border-brand-gray-100">
+            <div class="mx-auto max-w-6xl px-4 space-y-4">
+                <h2 class="text-h3 font-semibold">Navbar Varianten</h2>
+
+                <nav class="flex items-center justify-between px-4 py-4 rounded-lg bg-white shadow border border-brand-gray-100">
+                    <div class="text-xl font-bold text-brand-primary">Wir tanzen</div>
+
+                    <button aria-label="Menue" class="inline-flex items-center justify-center rounded-md border border-brand-gray-300 px-3 py-2 text-brand-gray-700 transition hover:border-brand-primary hover:text-brand-primary hover:shadow">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </nav>
+
+                <nav class="flex items-center justify-between px-4 py-4 rounded-lg bg-white shadow border border-brand-gray-100">
+                    <div class="text-xl font-bold text-brand-primary">Wir tanzen</div>
+
+                    <ul class="flex flex-wrap gap-6">
+                        <li><a class="text-brand-gray-700 transition hover:text-brand-accent" href="#">Kurse</a></li>
+                        <li><a class="text-brand-gray-700 transition hover:text-brand-accent" href="#">Team</a></li>
+                        <li><a class="text-brand-gray-700 transition hover:text-brand-accent" href="#">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <!-- HERO -->
+        <section class="py-24 bg-brand-gray-50">
+            <div class="mx-auto max-w-4xl px-4 text-center">
+                <h1 class="text-hero text-brand-gray-800 mb-4">Tanzen verbindet</h1>
+                <p class="text-body-lg text-brand-gray-600 mb-8">Finde deinen perfekten Kurs und starte noch heute.</p>
+
+                <button class="px-6 py-3 bg-brand-primary text-white rounded-md text-lg hover:bg-brand-primary-dark"> Kurse entdecken </button>
+            </div>
+        </section>
+
+        <!-- SECTION: BUTTONS -->
+        <section class="py-16 md:py-24">
+            <div class="mx-auto max-w-6xl px-4">
+                <h2 class="text-h2 font-bold mb-8">Buttons</h2>
+                <p class="mb-6 text-brand-gray-600">Links: Default, rechts: Hover-Vorschau.</p>
+
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                    <div class="flex flex-wrap items-center gap-4 rounded-lg border border-brand-gray-200 bg-white p-4">
+                        <button class="px-4 py-2 rounded-md bg-brand-primary text-white font-medium transition hover:bg-brand-primary-dark hover:shadow">Primary</button>
+                        <button class="px-4 py-2 rounded-md bg-brand-primary-dark text-white font-medium shadow">Primary Hover</button>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-4 rounded-lg border border-brand-gray-200 bg-white p-4">
+                        <button class="px-4 py-2 rounded-md bg-brand-accent text-white font-medium transition hover:bg-brand-accent-dark hover:shadow">Accent</button>
+                        <button class="px-4 py-2 rounded-md bg-brand-accent-dark text-white font-medium shadow">Accent Hover</button>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-4 rounded-lg border border-brand-gray-200 bg-white p-4">
+                        <button class="px-4 py-2 rounded-md border border-brand-primary text-brand-primary transition hover:bg-brand-primary-light/20">Outline Primary</button>
+                        <button class="px-4 py-2 rounded-md border border-brand-primary bg-brand-primary-light/20 text-brand-primary">Outline Primary Hover</button>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-4 rounded-lg border border-brand-gray-200 bg-white p-4">
+                        <button class="px-4 py-2 rounded-md border border-brand-accent text-brand-accent transition hover:bg-brand-accent-light/20">Outline Accent</button>
+                        <button class="px-4 py-2 rounded-md border border-brand-accent bg-brand-accent-light/20 text-brand-accent">Outline Accent Hover</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: STATE MATRIX -->
+        <section class="py-16 md:py-24 bg-brand-gray-50">
+            <div class="mx-auto max-w-6xl px-4">
+                <h2 class="text-h2 font-bold mb-3">State Matrix</h2>
+                <p class="mb-8 text-brand-gray-600">Normal, Hover, Focus, Active, Disabled als direkte Vorschau.</p>
+
+                <div class="overflow-x-auto rounded-xl border border-brand-gray-200 bg-white">
+                    <table class="min-w-[760px] w-full border-collapse text-left text-body">
+                        <thead class="bg-brand-gray-100 text-brand-gray-700">
+                            <tr>
+                                <th class="px-4 py-3 font-semibold">Komponente</th>
+                                <th class="px-4 py-3 font-semibold">Normal</th>
+                                <th class="px-4 py-3 font-semibold">Hover</th>
+                                <th class="px-4 py-3 font-semibold">Focus</th>
+                                <th class="px-4 py-3 font-semibold">Active</th>
+                                <th class="px-4 py-3 font-semibold">Disabled</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-t border-brand-gray-200">
+                                <td class="px-4 py-4 font-medium">Primary Button</td>
+                                <td class="px-4 py-4"><button class="px-4 py-2 rounded-md bg-brand-primary text-white">Normal</button></td>
+                                <td class="px-4 py-4"><button class="px-4 py-2 rounded-md bg-brand-primary-dark text-white shadow">Hover</button></td>
+                                <td class="px-4 py-4"><button class="px-4 py-2 rounded-md bg-brand-primary text-white ring-4 ring-brand-primary/40">Focus</button></td>
+                                <td class="px-4 py-4"><button class="px-4 py-2 rounded-md bg-brand-primary-dark text-white scale-[0.98]">Active</button></td>
+                                <td class="px-4 py-4"><button disabled class="px-4 py-2 rounded-md bg-brand-gray-300 text-white cursor-not-allowed">Disabled</button></td>
+                            </tr>
+
+                            <tr class="border-t border-brand-gray-200">
+                                <td class="px-4 py-4 font-medium">Outline Accent</td>
+                                <td class="px-4 py-4"><button class="px-4 py-2 rounded-md border border-brand-accent text-brand-accent">Normal</button></td>
+                                <td class="px-4 py-4"><button class="px-4 py-2 rounded-md border border-brand-accent bg-brand-accent-light/20 text-brand-accent">Hover</button></td>
+                                <td class="px-4 py-4"><button class="px-4 py-2 rounded-md border border-brand-accent text-brand-accent ring-4 ring-brand-accent/20">Focus</button></td>
+                                <td class="px-4 py-4"><button class="px-4 py-2 rounded-md border border-brand-accent-dark bg-brand-accent-light/20 text-brand-accent-dark scale-[0.98]">Active</button></td>
+                                <td class="px-4 py-4"><button disabled class="px-4 py-2 rounded-md border border-brand-gray-300 text-brand-gray-400 cursor-not-allowed">Disabled</button></td>
+                            </tr>
+
+                            <tr class="border-t border-brand-gray-200">
+                                <td class="px-4 py-4 font-medium">Navigation Link</td>
+                                <td class="px-4 py-4"><a href="#" class="text-brand-gray-700">Normal</a></td>
+                                <td class="px-4 py-4"><a href="#" class="text-brand-accent underline decoration-brand-accent/50">Hover</a></td>
+                                <td class="px-4 py-4"><a href="#" class="rounded-sm px-1 text-brand-gray-700 ring-2 ring-brand-primary/40">Focus</a></td>
+                                <td class="px-4 py-4"><a href="#" class="text-brand-accent-dark">Active</a></td>
+                                <td class="px-4 py-4"><span class="text-brand-gray-400">Disabled</span></td>
+                            </tr>
+
+                            <tr class="border-t border-brand-gray-200">
+                                <td class="px-4 py-4 font-medium">Input Field</td>
+                                <td class="px-4 py-4"><input class="w-40 rounded-md border border-brand-gray-300 px-3 py-2" value="Normal" /></td>
+                                <td class="px-4 py-4"><input class="w-40 rounded-md border border-brand-primary px-3 py-2 shadow" value="Hover" /></td>
+                                <td class="px-4 py-4"><input class="w-40 rounded-md border border-brand-primary px-3 py-2 ring-4 ring-brand-primary/20 outline-none" value="Focus" /></td>
+                                <td class="px-4 py-4"><input class="w-40 rounded-md border border-brand-primary-dark px-3 py-2 bg-brand-primary/5" value="Active" /></td>
+                                <td class="px-4 py-4"><input disabled class="w-40 rounded-md border border-brand-gray-300 px-3 py-2 bg-brand-gray-100 text-brand-gray-400" value="Disabled" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: CARDS -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="mx-auto max-w-6xl px-4">
+                <h2 class="text-h2 font-bold mb-8">Cards</h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Standard Card -->
+                    <div class="group p-6 bg-white rounded-lg shadow-md border border-brand-gray-100 transition hover:-translate-y-1 hover:shadow-lg">
+                        <h3 class="text-xl font-semibold mb-2 text-brand-gray-800">Standard Card</h3>
+                        <p class="text-brand-gray-600 transition group-hover:text-brand-gray-700">Eine einfache Card mit Text.</p>
+                    </div>
+
+                    <!-- Bild Card -->
+                    <div class="group overflow-hidden bg-white rounded-lg shadow border border-brand-gray-100 transition hover:shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" alt="Tanzkurs" />
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-brand-gray-800">Bild Card</h3>
+                            <p class="text-brand-gray-600">Card mit Bild und Text.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-lg border border-brand-primary/20 bg-brand-primary/5">
+                        <h3 class="text-xl font-semibold mb-2 text-brand-primary">Hover Vorschau</h3>
+                        <p class="text-brand-gray-700">Die beiden Cards links haben aktive Hover-Animationen (Lift, Shadow, Zoom).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: KURS-CARDS -->
+        <section class="py-16 md:py-24 bg-brand-gray-50">
+            <div class="mx-auto max-w-6xl px-4">
+                <h2 class="text-h2 font-bold mb-8">Kurs Cards</h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="group p-6 bg-white rounded-xl shadow-md flex flex-col gap-4 border border-brand-gray-100 transition hover:-translate-y-1 hover:shadow-lg hover:border-brand-primary/40">
+                        <div>
+                            <h3 class="text-2xl font-bold text-brand-gray-800">Salsa Anfänger</h3>
+                            <p class="text-brand-gray-600">Montag · 18:00 – 19:00</p>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <span class="px-2 py-1 text-sm bg-brand-primary-light text-white rounded-full">Level 1</span>
+                            <span class="px-2 py-1 text-sm bg-brand-accent-light text-white rounded-full">Paartanz</span>
+                        </div>
+
+                        <button class="mt-auto px-4 py-2 bg-brand-primary text-white rounded-md transition hover:bg-brand-primary-dark hover:shadow">Platz reservieren</button>
+                    </div>
+
+                    <div class="p-6 bg-white rounded-xl shadow-md flex flex-col gap-4 border border-brand-primary/40">
+                        <div>
+                            <h3 class="text-2xl font-bold text-brand-gray-800">Salsa Anfänger (Hover)</h3>
+                            <p class="text-brand-gray-600">Montag · 18:00 – 19:00</p>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <span class="px-2 py-1 text-sm bg-brand-primary-dark text-white rounded-full">Level 1</span>
+                            <span class="px-2 py-1 text-sm bg-brand-accent-dark text-white rounded-full">Paartanz</span>
+                        </div>
+
+                        <button class="mt-auto px-4 py-2 bg-brand-primary-dark text-white rounded-md shadow">Platz reservieren Hover</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: FORM -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="mx-auto max-w-4xl px-4">
+                <h2 class="text-h2 font-bold mb-8">Formulare</h2>
+
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-brand-gray-700 font-medium">Name</label>
+                        <input class="mt-1 w-full rounded-md border-brand-gray-300 focus:border-brand-primary focus:ring-brand-primary" placeholder="Fokus zeigt Primary-Farbe" />
+                    </div>
+
+                    <div>
+                        <label class="block text-brand-gray-700 font-medium">Nachricht</label>
+                        <textarea class="mt-1 w-full rounded-md border-brand-gray-300 focus:border-brand-primary focus:ring-brand-primary" placeholder="Klick ins Feld fuer Fokus-Styling"></textarea>
+                    </div>
+
+                    <button class="px-4 py-2 bg-brand-primary text-white rounded-md transition hover:bg-brand-primary-dark hover:shadow">Senden</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- SECTION: TESTIMONIAL -->
+        <section class="py-16 md:py-24 bg-brand-gray-50">
+            <div class="mx-auto max-w-4xl px-4">
+                <h2 class="text-h2 font-bold mb-8">Testimonials</h2>
+
+                <div class="p-6 bg-white rounded-lg shadow border border-brand-gray-100 transition hover:shadow-lg">
+                    <p class="text-brand-gray-700 italic">„Tolle Atmosphäre und super Trainer!“</p>
+
+                    <div class="mt-4 flex items-center gap-3">
+                        <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe" class="w-10 h-10 rounded-full" alt="Profil Anna" />
+                        <div>
+                            <p class="font-semibold text-brand-gray-800">Anna</p>
+                            <p class="text-meta text-brand-gray-500">Salsa Teilnehmerin</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-brand-gray-900 text-brand-gray-300 py-12">
+            <div class="mx-auto max-w-6xl px-4 grid grid-cols-1 sm:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Wir tanzen</h4>
+                    <p class="text-brand-gray-400">Deine Tanzschule in Lübeck.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="transition hover:text-brand-accent-light">Kurse</a></li>
+                        <li><a href="#" class="transition hover:text-brand-accent-light">Team</a></li>
+                        <li><a href="#" class="transition hover:text-brand-accent-light">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Kontakt</h4>
+                    <p class="text-brand-gray-400">Musterstraße 1<br />Lübeck</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

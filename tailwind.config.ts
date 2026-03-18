@@ -50,11 +50,11 @@ const config: Config = {
             },
 
             fontSize: {
-                hero: ["2.5rem", { lineHeight: "1.1", fontWeight: "700" }],
+                hero: ["6rem", { lineHeight: "1.1", fontWeight: "700" }],
                 h1: ["2rem", { lineHeight: "1.2", fontWeight: "700" }],
                 h2: ["1.75rem", { lineHeight: "1.25", fontWeight: "700" }],
                 h3: ["1.5rem", { lineHeight: "1.3", fontWeight: "600" }],
-                body: ["1rem", { lineHeight: "1.6", fontWeight: "400" }],
+                body: ["1rem", { lineHeight: "1.2", fontWeight: "400" }],
                 "body-lg": ["1.125rem", { lineHeight: "1.6", fontWeight: "400" }],
                 meta: ["0.875rem", { lineHeight: "1.4", fontWeight: "400" }],
             },

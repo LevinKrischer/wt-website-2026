@@ -1,14 +1,93 @@
 ---
-const { title, subtitle, ctaText, ctaLink } = Astro.props;
+import heroBg from "../assets/imgs/hero-bg.jpg";
+import heroBgFitness from "../assets/imgs/hero-bg-fitness.jpeg";
+import heroBgKids from "../assets/imgs/hero-bg-kids.jpeg";
+import heroBgSocialDance from "../assets/imgs/hero-bg-social-dance.jpeg";
+
+const { title, subtitle, subtitleSecondLine, ctaText, ctaLink } = Astro.props;
+
+const heroImages = [heroBg, heroBgFitness, heroBgKids, heroBgSocialDance];
+const heroSlideDurationSeconds = 7;
+const heroCycleDuration = heroImages.length * heroSlideDurationSeconds;
 ---
 
-<section class="px-4 py-20 text-center">
-  <h1 class="text-4xl font-bold mb-4">{title}</h1>
-  <p class="text-lg text-gray-600 mb-8">{subtitle}</p>
-  <a
-    href={ctaLink}
-    class="inline-block px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700"
-  >
-    {ctaText}
-  </a>
+<style>
+    .hero-section {
+        --hero-overlay-opacity: 0.2;
+        --hero-cycle-duration: 30s;
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        background-color: #111827;
+        height: calc(100dvh - 4rem); /* 4rem = Header height */
+    }
+
+    .hero-background {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        pointer-events: none;
+    }
+
+    .hero-slide {
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(
+                rgba(0, 0, 0, var(--hero-overlay-opacity)),
+                rgba(0, 0, 0, var(--hero-overlay-opacity))
+            ),
+            var(--hero-image);
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        animation: heroCrossfade var(--hero-cycle-duration) ease-in-out infinite;
+        animation-delay: var(--hero-delay);
+    }
+
+    @keyframes heroCrossfade {
+        0% {
+            opacity: 0.12;
+        }
+        2.4%,
+        23.2% {
+            opacity: 1;
+        }
+        25% {
+            opacity: 0.12;
+        }
+        27%,
+        98% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0.12;
+        }
+    }
+
+    .content-inner {
+        position: relative;
+        z-index: 1;
+    }
+</style>
+
+<section class="hero-section px-4 py-20 text-center display-flex flex-col items-center justify-center" style={`--hero-cycle-duration: ${heroCycleDuration}s;`}>
+    <div class="hero-background" aria-hidden="true">
+        {
+            heroImages.map((image, index) => (
+                <span
+                    class="hero-slide"
+                    style={`--hero-image: url('${image.src}'); --hero-delay: -${index * heroSlideDurationSeconds}s;`}
+                ></span>
+            ))
+        }
+    </div>
+
+    <div class="content-inner h-full flex flex-col items-center justify-center">
+        <h1 class="text-hero font-bold mb-4 text-brand-accent text-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">{title}</h1>
+        <p class="text-3xl text-gray-50 mb-8 text-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">{subtitle}<br />{subtitleSecondLine}</p>
+        <img src="/src/assets/imgs/curved-line-simple-green-var2-shadowed.svg" alt="decorative underline" class="w-md mb-5" />
+        <a href={ctaLink} class="heroBtn rounded-3xl bg-brand-primary px-4 py-2 font-medium text-gray-50 hover:bg-brand-primary-light transition hover:shadow">
+            {ctaText}
+        </a>
+    </div>
 </section>

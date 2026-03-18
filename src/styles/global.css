@@ -3,24 +3,81 @@
 @config "../../tailwind.config.ts";
 
 :root {
-	--font-sans: "Poppins", system-ui, sans-serif;
-	--font-heading: "Raleway", system-ui, sans-serif;
-	
+    --font-sans: "Poppins", system-ui, sans-serif;
+    --font-heading: "Raleway", system-ui, sans-serif;
+    --trans-default: all 0.3s ease-in-out;
 }
 
 @layer base {
-	html {
-		font-family: var(--font-sans);
-	}
+    html {
+        font-family: var(--font-sans);
+    }
 
-	body {
-		font-family: inherit;
-	}
+    body {
+        font-family: inherit;
+    }
 
-	button,
-	input,
-	select,
-	textarea {
-		font: inherit;
-	}
+    button,
+    input,
+    select,
+    textarea {
+        font: inherit;
+    }
+}
+
+.heroBtn {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 110%;
+        height: 110%;
+        transform: translate(-50%, -50%);
+        border-radius: inherit;
+        border-left: 0.25rem solid theme("colors.brand.primary");
+        border-right: 0.25rem solid theme("colors.brand.primary");
+        pointer-events: none;
+        transition: var(--trans-default);
+        animation: pulse 1.2s ease-out infinite;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 120%;
+        height: 120%;
+        transform: translate(-50%, -50%);
+        border-radius: inherit;
+        border-left: 0.175rem solid theme("colors.brand.primary.light");
+        border-right: 0.175rem solid theme("colors.brand.primary.light");
+        pointer-events: none;
+        transition: var(--trans-default);
+        animation: pulse 1.2s ease-out infinite;
+    }
+
+    &:hover::before {
+        width: 115%;
+        height: 115%;
+    }
+
+    &:hover::after {
+        width: 130%;
+        height: 130%;
+    }
+
+    @keyframes pulse {
+        0% {
+            opacity: 0.75;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(1.5);
+        }
+    }
 }

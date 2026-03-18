@@ -1,4 +1,7 @@
 ---
+import Image from "astro/components/Image.astro";
+import wtLogo from "../assets/imgs/wt-logo-navbar.svg";
+
 const navItems = [
     { href: "/", label: "Start" },
     { href: "/kurse", label: "Tanzen & Fitness" },
@@ -17,8 +20,8 @@ const isActive = (href: string) => normalizePath(href) === currentPath;
 
 <header class="sticky top-0 z-40 bg-brand-gray-900 backdrop-blur">
     <nav class="mx-auto grid max-w-6xl grid-cols-[1fr_auto] items-center gap-4 px-4 py-3 md:grid-cols-[1fr_auto_1fr]" aria-label="Hauptnavigation">
-        <a href="/" class="inline-flex items-center gap-3 rounded-md px-2 py-1 transition">
-            <span class="text-3xl font-display font-semibold text-brand-gray-50">Wir Tanzen</span>
+        <a href="/" class="inline-flex items-center rounded-md px-2 py-0 transition">
+            <Image src={wtLogo} alt="Wir Tanzen" class="h-10 w-auto" />
         </a>
 
         <ul class="hidden items-center justify-center gap-7 md:flex">
@@ -97,8 +100,8 @@ const isActive = (href: string) => normalizePath(href) === currentPath;
             href="/wochenplan"
             class={`mt-auto inline-flex items-center justify-center rounded-md px-4 py-3 font-medium text-white transition ${
                 isActive("/wochenplan")
-                    ? "bg-brand-primary-dark"
-                    : "bg-brand-primary hover:bg-brand-primary-dark"
+                    ? "bg-brand-primary"
+                    : "bg-brand-primary hover:bg-brand-primary-light"
             }`}
             aria-current={isActive("/wochenplan") ? "page" : undefined}
         >

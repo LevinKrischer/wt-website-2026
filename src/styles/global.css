@@ -5,6 +5,7 @@
 :root {
 	--font-sans: "Poppins", system-ui, sans-serif;
 	--font-heading: "Raleway", system-ui, sans-serif;
+	
 }
 
 @layer base {

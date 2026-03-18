@@ -1,8 +1,8 @@
 ---
 const navItems = [
     { href: "/", label: "Start" },
-    { href: "/kurse", label: "Kurse" },
-    { href: "/ueber-uns", label: "Ueber uns" },
+    { href: "/kurse", label: "Tanzen & Fitness" },
+    { href: "/ueber-uns", label: "Über uns" },
     { href: "/kontakt", label: "Kontakt" },
 ];
 
@@ -15,11 +15,10 @@ const currentPath = normalizePath(Astro.url.pathname);
 const isActive = (href: string) => normalizePath(href) === currentPath;
 ---
 
-<header class="sticky top-0 z-40 border-b border-brand-gray-200 bg-white/95 backdrop-blur">
+<header class="sticky top-0 z-40 bg-brand-gray-900 backdrop-blur">
     <nav class="mx-auto grid max-w-6xl grid-cols-[1fr_auto] items-center gap-4 px-4 py-3 md:grid-cols-[1fr_auto_1fr]" aria-label="Hauptnavigation">
-        <a href="/" class="inline-flex items-center gap-3 rounded-md px-2 py-1 transition hover:bg-brand-gray-100">
-            <span class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-dashed border-brand-primary/40 bg-brand-primary/5 text-meta font-semibold text-brand-primary">Logo</span>
-            <span class="text-lg font-semibold text-brand-gray-800">Wir tanzen</span>
+        <a href="/" class="inline-flex items-center gap-3 rounded-md px-2 py-1 transition">
+            <span class="text-3xl font-display font-semibold text-brand-gray-50">Wir Tanzen</span>
         </a>
 
         <ul class="hidden items-center justify-center gap-7 md:flex">
@@ -27,10 +26,10 @@ const isActive = (href: string) => normalizePath(href) === currentPath;
                 <li>
                     <a
                         href={item.href}
-                        class={`relative font-medium transition after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:rounded-full after:bg-brand-primary after:transition-all after:duration-300 ${
+                        class={`relative font-medium transition after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:rounded-full after:bg-brand-primary-light after:transition-all after:duration-300 ${
                             isActive(item.href)
-                                ? "text-brand-primary after:w-full"
-                                : "text-brand-gray-700 after:w-0 hover:text-brand-accent hover:after:w-full"
+                                ? "text-brand-primary-light after:w-full"
+                                : "text-brand-gray-50 after:w-0 hover:text-brand-primary-light hover:after:w-full"
                         }`}
                         aria-current={isActive(item.href) ? "page" : undefined}
                     >
@@ -43,7 +42,7 @@ const isActive = (href: string) => normalizePath(href) === currentPath;
         <div class="ml-auto flex items-center gap-2 md:gap-3">
             <a
                 href="/wochenplan"
-                class={`hidden rounded-md px-4 py-2 font-medium text-white transition hover:shadow md:inline-flex ${
+                class={`hidden rounded-3xl px-4 py-2 font-medium text-white transition hover:shadow md:inline-flex ${
                     isActive("/wochenplan")
                         ? "bg-brand-primary-dark"
                         : "bg-brand-primary hover:bg-brand-primary-dark"
@@ -53,7 +52,7 @@ const isActive = (href: string) => normalizePath(href) === currentPath;
                 Wochenplan
             </a>
 
-            <button id="mobile-menu-toggle" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-md border border-brand-gray-300 text-brand-gray-700 transition hover:border-brand-primary hover:text-brand-primary md:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menue oeffnen">
+            <button id="mobile-menu-toggle" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-md border border-brand-gray-300 text-brand-gray-50 transition hover:border-brand-primary hover:text-brand-primary md:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menue oeffnen">
                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                     <path d="M4 7H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                     <path d="M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />

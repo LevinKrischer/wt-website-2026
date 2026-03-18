@@ -30,7 +30,7 @@ const config: Config = {
                         600: "#4b5563",
                         700: "#374151",
                         800: "#1f2937",
-                        900: "#111827",
+                        900: "#252525",
                     },
                 },
                 success: "#23972c",
@@ -57,6 +57,11 @@ const config: Config = {
                 body: ["1rem", { lineHeight: "1.6", fontWeight: "400" }],
                 "body-lg": ["1.125rem", { lineHeight: "1.6", fontWeight: "400" }],
                 meta: ["0.875rem", { lineHeight: "1.4", fontWeight: "400" }],
+            },
+
+            fontFamily: {
+                sans: ["Poppins", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+                display: ["Dancing Script", "cursive"],
             },
 
             borderRadius: {
